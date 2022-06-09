@@ -3,7 +3,7 @@ import { Users } from '../../../data.js'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     const httpMethod = req.method;
-    const { id , name , email } = req.body;
+    const { name , email } = req.body;
     const usersCount = Users.length;
     const re = new RegExp('/^\S@\S$/');
     var result = Users;
@@ -31,7 +31,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                     "email" : email
                 };
                 res.status(200).json({
-                    id : id,
+                    id : usersCount,
                     name : name,
                     email : email
                 });

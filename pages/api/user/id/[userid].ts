@@ -6,6 +6,7 @@ export default function userHandler(req: NextApiRequest, res: NextApiResponse) {
     const userid = req.query.userid;
     const { id , name , email } = req.body;
     var result = Users.filter((user) => user.id === Number(userid));
+    var resultindex = Users.indexOf(result[0]);
     const re = new RegExp('/^\S@\S$/');
   
     switch (httpMethod) {
@@ -35,7 +36,7 @@ export default function userHandler(req: NextApiRequest, res: NextApiResponse) {
           break;
       case 'DELETE':
         // Delete the user
-          Users.splice(Number(userid)-1,1);
+          Users.splice(resultindex,1);
           if (result.length > 0)
             res.status(200).json({
               message : "The user had been delete",

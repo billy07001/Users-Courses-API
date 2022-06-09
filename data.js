@@ -40,5 +40,23 @@ export const Enrollment = [
         "userId" : 1 ,
         "courseId" : 1 ,
         "role" : "student"
-    }
+    },
+    {
+        "id" : 2 ,
+        "userId" : 2 ,
+        "courseId" : 2 ,
+        "role" : "teacher"
+    },
+    {
+        "id" : 3 ,
+        "userId" : 1 ,
+        "courseId" : 2 ,
+        "role" : "student"
+    },
+    {
+        "id" : 4 ,
+        "userId" : 2 ,
+        "courseId" : 1 ,
+        "role" : "teacher"
+    },
 ]
